@@ -124,7 +124,7 @@ public class MainActivity extends AppCompatActivity {
     //This function will load items by reading every line od the data file
     private void loadItems(){
        try{
-           items = new ArrayList<>(org.apache.commons.io.FileUtils.readLines(getDatafile(), Charset.defaultCharset()));
+           items = new ArrayList<>(FileUtils.readLines(getDatafile(), Charset.defaultCharset()));
     }catch (IOException e){
         e.printStackTrace();
            Log.e("MainActivity","error reading items", e);
